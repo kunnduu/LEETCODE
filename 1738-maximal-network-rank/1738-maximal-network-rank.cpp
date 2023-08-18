@@ -8,6 +8,7 @@ public:
             adjlist[first].push_back(second);
             adjlist[second].push_back(first);
         }
+        int m;
         int maxi=INT_MIN;
         for(int i=0;i<n-1;i++)
         {
@@ -15,10 +16,10 @@ public:
             {
             int v=adjlist[i].size();
             int v1=adjlist[j].size();
-            int m;
+            
             if((find(adjlist[i].begin(),adjlist[i].end(),j)!=adjlist[i].end()) && (find(adjlist[j].begin(),adjlist[j].end(),i)!=adjlist[j].end()))
             { 
-            m = v+v1-1;
+              m = v+v1-1;
             }
             else
             {
